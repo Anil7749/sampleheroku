@@ -2,15 +2,15 @@ pipeline {
     agent any
 
     environment {
-        AWS_ACCOUNT_ID  = '533267129063'
-        AWS_REGION      = 'us-east-1'
-        ECR_REPO        = 'heroku-repo'
+        AWS_ACCOUNT_ID  = ''
+        AWS_REGION      = ''
+        ECR_REPO        = ''
         IMAGE_TAG       = "${BUILD_NUMBER}"
-        IMAGE_URI       = "533267129063.dkr.ecr.us-east-1.amazonaws.com/heroku-repo"
-        ECS_CLUSTER     = 'heroku-cluster'
-        ECS_SERVICE     = 'sample-heroku-task-service'
-        TASK_DEFINITION = 'sample-heroku-task'
-        CONTAINER_NAME  = 'sample-heroku-container'
+        IMAGE_URI       = ""
+        ECS_CLUSTER     = ''
+        ECS_SERVICE     = ''
+        TASK_DEFINITION = ''
+        CONTAINER_NAME  = ''
     }
 
     stages {
@@ -18,7 +18,7 @@ pipeline {
         stage('Clone Repo') {
             steps {
                 git branch: 'main',
-                    url: 'https://github.com/Anil7749/sampleheroku.git'
+                    url: ''
             }
         }
 
